@@ -3,31 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Camille Rousseau — Photographe portraitiste, Lyon</title>
-<meta name="description" content="Photographe portraitiste basée à Lyon. Portraits intimistes, séances éditoriales et reportages d'auteur.">
+<title>Hélène Vasseur — Coach professionnelle, Nantes</title>
+<meta name="description" content="Coaching de transition professionnelle et accompagnement de dirigeants. Cabinet à Nantes et à distance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #f5f1ea;
-    --cream-soft: #ebe6dc;
-    --ink: #1a1814;
-    --ink-soft: #4a4640;
-    --accent: #8b3a2b;
-    --line: rgba(26, 24, 20, 0.12);
+    --sand: #f4efe7;
+    --sand-deep: #e8e0d2;
+    --ink: #1f1d1a;
+    --ink-soft: #5a564f;
+    --terracotta: #b8654a;
+    --sage: #7a8470;
+    --line: rgba(31, 29, 26, 0.1);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    font-weight: 300;
-    background: var(--cream);
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    font-weight: 400;
+    background: var(--sand);
     color: var(--ink);
-    line-height: 1.6;
+    line-height: 1.65;
     overflow-x: hidden;
   }
 
@@ -44,18 +44,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(245, 241, 234, 0.85);
+    background: rgba(244, 239, 231, 0.9);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--line);
   }
 
   .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
     font-family: 'Fraunces', serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    font-style: italic;
+    font-size: 1.3rem;
+    letter-spacing: -0.01em;
+  }
+
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .logo-mark::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: var(--terracotta);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .nav-links {
@@ -67,81 +88,71 @@
   .nav-links a {
     color: var(--ink);
     text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
   }
 
-  .nav-links a:hover { opacity: 0.5; }
+  .nav-links a:hover { color: var(--terracotta); }
 
   .nav-cta {
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--ink);
+    background: var(--ink);
+    color: var(--sand);
+    padding: 0.7rem 1.4rem;
     text-decoration: none;
-    border-bottom: 1px solid var(--ink);
-    padding-bottom: 2px;
-    transition: opacity 0.3s ease;
+    font-size: 0.85rem;
+    border-radius: 100px;
+    transition: background 0.3s ease;
   }
 
-  .nav-cta:hover { opacity: 0.5; }
+  .nav-cta:hover { background: var(--terracotta); }
 
   /* --- HERO --- */
   .hero {
     min-height: 100vh;
-    padding: 8rem 3rem 4rem;
+    padding: 9rem 3rem 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
     align-items: center;
-    position: relative;
-  }
-
-  .hero-text {
-    z-index: 2;
   }
 
   .hero-eyebrow {
-    display: inline-block;
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.85rem;
     color: var(--ink-soft);
-    position: relative;
-    padding-left: 3rem;
+    margin-bottom: 2.5rem;
   }
 
   .hero-eyebrow::before {
     content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 2rem;
-    height: 1px;
-    background: var(--ink-soft);
+    width: 6px;
+    height: 6px;
+    background: var(--terracotta);
+    border-radius: 50%;
   }
 
   .hero h1 {
     font-family: 'Fraunces', serif;
-    font-size: clamp(3rem, 7vw, 6.5rem);
-    font-weight: 300;
-    line-height: 0.95;
-    letter-spacing: -0.03em;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
     margin-bottom: 2rem;
   }
 
   .hero h1 em {
     font-style: italic;
-    color: var(--accent);
-    font-weight: 400;
+    color: var(--terracotta);
   }
 
   .hero-sub {
-    font-size: 1.1rem;
-    max-width: 480px;
+    font-size: 1.15rem;
+    max-width: 500px;
     color: var(--ink-soft);
     margin-bottom: 3rem;
     line-height: 1.7;
@@ -149,283 +160,301 @@
 
   .hero-actions {
     display: flex;
-    gap: 2rem;
+    gap: 1.2rem;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .btn-primary {
     background: var(--ink);
-    color: var(--cream);
-    padding: 1.1rem 2.2rem;
+    color: var(--sand);
+    padding: 1rem 2rem;
     text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    border-radius: 100px;
     transition: all 0.3s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
-  .btn-primary:hover {
-    background: var(--accent);
-    transform: translateY(-2px);
+  .btn-primary::after {
+    content: '→';
+    transition: transform 0.3s ease;
   }
+
+  .btn-primary:hover { background: var(--terracotta); }
+  .btn-primary:hover::after { transform: translateX(4px); }
 
   .btn-secondary {
     color: var(--ink);
     text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    padding: 1rem 0;
     border-bottom: 1px solid var(--ink);
-    padding-bottom: 4px;
   }
 
-  .hero-image {
+  /* --- HERO VISUEL (composition architecturale) --- */
+  .hero-visual {
     position: relative;
-    height: 80vh;
-    overflow: hidden;
-  }
-
-  .hero-image img {
+    aspect-ratio: 4/5;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(20%) contrast(1.05);
   }
 
-  /* --- SECTION INTRO --- */
-  .intro {
-    padding: 7rem 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .intro-label {
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    padding-top: 0.5rem;
-    border-top: 1px solid var(--ink);
-    display: inline-block;
-    margin-bottom: 3rem;
-  }
-
-  .intro-text {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
-    line-height: 1.35;
-    font-weight: 300;
-    letter-spacing: -0.01em;
-    max-width: 900px;
-  }
-
-  .intro-text em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  /* --- GALERIE --- */
-  .gallery {
-    padding: 4rem 3rem 8rem;
-    max-width: 1600px;
-    margin: 0 auto;
-  }
-
-  .gallery-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    margin-bottom: 4rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .gallery-header h2 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: 300;
-    letter-spacing: -0.02em;
-    line-height: 1;
-  }
-
-  .gallery-header h2 em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .gallery-meta {
-    font-size: 0.85rem;
-    color: var(--ink-soft);
-    letter-spacing: 0.05em;
-  }
-
-  .gallery-rows-wrapper {
-    display: block;
-  }
-
-  .gallery-item {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 25%;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    filter: grayscale(10%);
-  }
-
-  .gallery-item:hover img {
-    transform: scale(1.04);
-    filter: grayscale(0%);
-  }
-
-  .gallery-item-overlay {
+  .hero-shape-1 {
     position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    color: var(--cream);
+    inset: 0;
+    background: var(--sand-deep);
+    border-radius: 50% 50% 4px 4px;
+    z-index: 1;
+  }
+
+  .hero-shape-2 {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    bottom: 5%;
+    background: var(--terracotta);
+    border-radius: 50% 50% 4px 4px;
     z-index: 2;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.4s ease;
+    opacity: 0.92;
   }
 
-  .gallery-item:hover .gallery-item-overlay {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .gallery-item-overlay h3 {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin-bottom: 0.2rem;
-  }
-
-  .gallery-item-overlay p {
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  .hero-shape-3 {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    right: 20%;
+    bottom: 10%;
+    background: var(--sage);
+    border-radius: 50% 50% 4px 4px;
+    z-index: 3;
     opacity: 0.85;
   }
 
-  .gallery-item::after {
-    content: '';
+  .hero-quote {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
-  }
-
-  .gallery-item:hover::after { opacity: 1; }
-
-  /* Layouts asymétriques de la galerie — hauteurs harmonisées par rangée */
-  .gallery-row {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .gallery-row:last-child { margin-bottom: 0; }
-
-  .gi-1 { grid-column: span 7; height: 60vh; }
-  .gi-2 { grid-column: span 5; height: 60vh; }
-  .gi-3 { grid-column: span 5; height: 55vh; }
-  .gi-4 { grid-column: span 7; height: 55vh; }
-  .gi-5 { grid-column: span 6; height: 65vh; }
-  .gi-6 { grid-column: span 6; height: 65vh; }
-
-  /* --- SERVICES --- */
-  .services {
+    bottom: -20px;
+    left: -30px;
     background: var(--ink);
-    color: var(--cream);
-    padding: 8rem 3rem;
+    color: var(--sand);
+    padding: 1.5rem 1.8rem;
+    border-radius: 12px;
+    z-index: 4;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    max-width: 280px;
+    line-height: 1.4;
+    box-shadow: 0 20px 60px rgba(31, 29, 26, 0.15);
   }
 
-  .services-inner {
+  .hero-quote-author {
+    display: block;
+    margin-top: 0.8rem;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(244, 239, 231, 0.6);
+  }
+
+  /* --- BANDEAU CHIFFRES --- */
+  .stats {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 3rem 3rem;
+    max-width: 1400px;
+    margin: 2rem auto 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+
+  .stat {
+    text-align: left;
+  }
+
+  .stat-number {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    line-height: 1;
+    color: var(--terracotta);
+    margin-bottom: 0.7rem;
+    font-weight: 400;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  /* --- POURQUOI --- */
+  .why {
+    padding: 8rem 3rem;
     max-width: 1400px;
     margin: 0 auto;
   }
 
-  .services-header {
+  .section-header {
     margin-bottom: 5rem;
     max-width: 700px;
   }
 
-  .services-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
+  .section-eyebrow {
+    font-size: 0.8rem;
+    color: var(--terracotta);
     text-transform: uppercase;
-    color: rgba(245, 241, 234, 0.6);
+    letter-spacing: 0.2em;
     margin-bottom: 1.5rem;
     display: block;
   }
 
-  .services h2 {
+  .section-title {
     font-family: 'Fraunces', serif;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 300;
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    font-weight: 400;
     line-height: 1.05;
     letter-spacing: -0.02em;
   }
 
-  .services h2 em {
+  .section-title em {
     font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .why-card {
+    padding: 2.5rem;
+    background: var(--sand-deep);
+    border-radius: 16px;
+    transition: transform 0.4s ease;
+  }
+
+  .why-card:hover { transform: translateY(-4px); }
+
+  .why-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--ink);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sand);
+    font-family: 'Fraunces', serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    letter-spacing: 0.05em;
+  }
+
+  .why-card:nth-child(2) .why-icon { background: var(--terracotta); }
+  .why-card:nth-child(3) .why-icon { background: var(--sage); }
+
+  .why-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .why-card p {
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  /* --- ACCOMPAGNEMENTS --- */
+  .programs {
+    background: var(--ink);
+    color: var(--sand);
+    padding: 8rem 3rem;
+  }
+
+  .programs-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .programs .section-eyebrow {
     color: #d4856b;
   }
 
-  .services-grid {
+  .programs .section-title {
+    color: var(--sand);
+  }
+
+  .programs .section-title em {
+    color: #d4856b;
+  }
+
+  .program {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border-top: 1px solid rgba(245, 241, 234, 0.15);
+    grid-template-columns: auto 2fr 1fr auto;
+    gap: 3rem;
+    align-items: center;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(244, 239, 231, 0.15);
+    transition: padding 0.3s ease;
   }
 
-  .service {
-    padding: 3rem 2.5rem;
-    border-right: 1px solid rgba(245, 241, 234, 0.15);
-    border-bottom: 1px solid rgba(245, 241, 234, 0.15);
-    transition: background 0.4s ease;
+  .program:first-of-type { border-top: 1px solid rgba(244, 239, 231, 0.15); }
+
+  .program:hover {
+    padding-left: 1.5rem;
   }
 
-  .service:nth-child(3n) { border-right: none; }
-  .service:hover { background: rgba(245, 241, 234, 0.03); }
-
-  .service-num {
+  .program-num {
     font-family: 'Fraunces', serif;
     font-style: italic;
-    font-size: 1rem;
-    color: rgba(245, 241, 234, 0.5);
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: rgba(244, 239, 231, 0.4);
+    min-width: 50px;
   }
 
-  .service h3 {
+  .program-title {
     font-family: 'Fraunces', serif;
     font-size: 1.8rem;
     font-weight: 400;
-    margin-bottom: 1.5rem;
     line-height: 1.2;
   }
 
-  .service p {
-    color: rgba(245, 241, 234, 0.7);
+  .program-desc {
+    color: rgba(244, 239, 231, 0.7);
     font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
+    line-height: 1.6;
   }
 
-  .service-price {
+  .program-meta {
+    text-align: right;
+  }
+
+  .program-duration {
+    font-size: 0.8rem;
+    color: rgba(244, 239, 231, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+  }
+
+  .program-price {
     font-family: 'Fraunces', serif;
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: #d4856b;
   }
 
@@ -435,35 +464,87 @@
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 5fr 7fr;
+    grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: center;
   }
 
-  .about-image {
-    aspect-ratio: 3/4;
-    overflow: hidden;
+  .about-visual {
+    position: relative;
+    aspect-ratio: 4/5;
   }
 
-  .about-image img {
+  .about-shape {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--sand-deep);
+  }
+
+  .about-shape img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(30%);
+    object-position: center 20%;
+  }
+
+  .about-card {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    background: var(--sand);
+    padding: 1.8rem;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  }
+
+  .about-card-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+  }
+
+  .about-card-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .about-card-list li {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    color: var(--ink);
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  .about-card-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--terracotta);
+    border-radius: 50%;
+    flex-shrink: 0;
   }
 
   .about-content h2 {
     font-family: 'Fraunces', serif;
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   .about-content h2 em {
     font-style: italic;
-    color: var(--accent);
+    color: var(--terracotta);
   }
 
   .about-content p {
@@ -474,198 +555,414 @@
   }
 
   .about-signature {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     font-family: 'Fraunces', serif;
     font-style: italic;
-    font-size: 1.5rem;
-    color: var(--accent);
+    font-size: 1.4rem;
+    color: var(--terracotta);
+  }
+
+  /* --- METHODE --- */
+  .method {
+    padding: 8rem 3rem;
+    background: var(--sand-deep);
+  }
+
+  .method-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .method-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 4rem;
+    position: relative;
+  }
+
+  .method-steps::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 5%;
+    right: 5%;
+    height: 1px;
+    background: var(--line);
+    z-index: 0;
+  }
+
+  .method-step {
+    position: relative;
+    padding-right: 2rem;
+  }
+
+  .method-step:last-child { padding-right: 0; }
+
+  .method-circle {
+    width: 56px;
+    height: 56px;
+    background: var(--sand);
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .method-step:nth-child(2) .method-circle { background: var(--terracotta); color: var(--sand); border-color: var(--terracotta); }
+  .method-step:nth-child(3) .method-circle { background: var(--sage); color: var(--sand); border-color: var(--sage); }
+  .method-step:nth-child(4) .method-circle { background: var(--ink); color: var(--sand); border-color: var(--ink); }
+
+  .method-step h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.7rem;
+    line-height: 1.2;
+  }
+
+  .method-step p {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   /* --- TEMOIGNAGES --- */
   .testimonials {
-    background: var(--cream-soft);
     padding: 8rem 3rem;
-  }
-
-  .testimonials-inner {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
   }
 
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+  }
+
   .testimonial {
-    text-align: center;
-    padding: 0 2rem;
+    background: var(--sand-deep);
+    padding: 3rem;
+    border-radius: 16px;
+    position: relative;
   }
 
   .testimonial-quote {
     font-family: 'Fraunces', serif;
-    font-size: clamp(1.5rem, 3vw, 2.4rem);
-    font-weight: 300;
-    line-height: 1.4;
+    font-size: 1.25rem;
+    line-height: 1.5;
     font-style: italic;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     color: var(--ink);
-  }
-
-  .testimonial-quote::before {
-    content: '"';
-    font-size: 4rem;
-    line-height: 0;
-    vertical-align: -0.4em;
-    color: var(--accent);
-    margin-right: 0.2rem;
   }
 
   .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    color: var(--sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .testimonial:nth-child(2) .testimonial-avatar { background: var(--sage); }
+
+  .testimonial-name {
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .testimonial-role {
     font-size: 0.85rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
     color: var(--ink-soft);
   }
 
-  .testimonial-author strong {
+  /* --- FAQ --- */
+  .faq {
+    padding: 8rem 3rem;
+    background: var(--sand-deep);
+  }
+
+  .faq-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faq-list {
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 1.8rem 0;
+    cursor: pointer;
+  }
+
+  .faq-item:first-child { border-top: 1px solid var(--line); }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .faq-question h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
     color: var(--ink);
-    font-weight: 500;
+  }
+
+  .faq-toggle {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+  }
+
+  .faq-item.open .faq-toggle {
+    background: var(--terracotta);
+    color: var(--sand);
+    border-color: var(--terracotta);
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding-top 0.4s ease;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .faq-item.open .faq-answer {
+    max-height: 200px;
+    padding-top: 1.2rem;
   }
 
   /* --- CONTACT --- */
   .contact {
     padding: 8rem 3rem;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
-    text-align: center;
   }
 
-  .contact-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    margin-bottom: 2rem;
-    display: block;
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: start;
   }
 
-  .contact h2 {
+  .contact-info h2 {
     font-family: 'Fraunces', serif;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin-bottom: 3rem;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
   }
 
-  .contact h2 em {
+  .contact-info h2 em {
     font-style: italic;
-    color: var(--accent);
+    color: var(--terracotta);
+  }
+
+  .contact-info p {
+    color: var(--ink-soft);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+
+  .contact-details {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .contact-details li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--sand-deep);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.95rem;
   }
 
   .contact-form {
-    text-align: left;
-    margin-top: 4rem;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    background: var(--sand-deep);
+    padding: 2.5rem;
+    border-radius: 16px;
   }
 
   .form-field {
-    position: relative;
+    margin-bottom: 1.5rem;
   }
 
   .form-field label {
     display: block;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    font-size: 0.85rem;
     color: var(--ink-soft);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
   }
 
   .form-field input,
   .form-field textarea,
   .form-field select {
     width: 100%;
-    border: none;
-    border-bottom: 1px solid var(--ink);
-    background: transparent;
-    padding: 0.5rem 0 0.8rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+    border: 1px solid var(--line);
+    background: var(--sand);
+    padding: 0.9rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
     color: var(--ink);
+    border-radius: 8px;
     transition: border-color 0.3s ease;
-    border-radius: 0;
   }
 
-  .form-field textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
+  .form-field textarea { resize: vertical; min-height: 100px; }
 
   .form-field input:focus,
   .form-field textarea:focus,
   .form-field select:focus {
     outline: none;
-    border-bottom-color: var(--accent);
+    border-color: var(--terracotta);
   }
-
-  .form-field-full { margin-bottom: 2rem; }
 
   .form-submit {
-    margin-top: 2rem;
+    width: 100%;
     background: var(--ink);
-    color: var(--cream);
+    color: var(--sand);
     border: none;
-    padding: 1.2rem 3rem;
-    font-size: 0.85rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    padding: 1.1rem;
+    font-size: 0.95rem;
     cursor: pointer;
     font-family: inherit;
+    border-radius: 100px;
     transition: background 0.3s ease;
+    margin-top: 0.5rem;
   }
 
-  .form-submit:hover { background: var(--accent); }
+  .form-submit:hover { background: var(--terracotta); }
 
   /* --- FOOTER --- */
   footer {
-    border-top: 1px solid var(--line);
-    padding: 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-    color: var(--ink-soft);
+    background: var(--ink);
+    color: var(--sand);
+    padding: 4rem 3rem 2rem;
   }
 
-  footer .logo { font-size: 1.1rem; }
-
-  .footer-links {
-    display: flex;
-    gap: 2rem;
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
-  .footer-links a {
-    color: var(--ink-soft);
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(244, 239, 231, 0.15);
+  }
+
+  .footer-brand .logo {
+    color: var(--sand);
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-brand .logo-mark {
+    border-color: var(--sand);
+  }
+
+  .footer-brand p {
+    color: rgba(244, 239, 231, 0.6);
+    font-size: 0.9rem;
+    max-width: 350px;
+    line-height: 1.7;
+  }
+
+  .footer-col h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(244, 239, 231, 0.5);
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .footer-col a {
+    color: var(--sand);
     text-decoration: none;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
   }
 
-  .footer-links a:hover { color: var(--accent); }
+  .footer-col a:hover { color: #d4856b; }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: rgba(244, 239, 231, 0.5);
+  }
 
   /* --- ANIMATIONS --- */
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .hero-eyebrow { animation: fadeUp 0.8s ease 0.1s both; }
-  .hero h1 { animation: fadeUp 0.8s ease 0.2s both; }
-  .hero-sub { animation: fadeUp 0.8s ease 0.4s both; }
-  .hero-actions { animation: fadeUp 0.8s ease 0.6s both; }
-  .hero-image { animation: fadeUp 1s ease 0.3s both; }
+  .hero-eyebrow { animation: fadeUp 0.7s ease 0.1s both; }
+  .hero h1 { animation: fadeUp 0.7s ease 0.2s both; }
+  .hero-sub { animation: fadeUp 0.7s ease 0.35s both; }
+  .hero-actions { animation: fadeUp 0.7s ease 0.5s both; }
+  .hero-visual { animation: fadeUp 0.9s ease 0.3s both; }
 
   /* --- MOBILE --- */
   @media (max-width: 900px) {
@@ -675,40 +972,26 @@
     .hero {
       grid-template-columns: 1fr;
       padding: 7rem 1.5rem 3rem;
-      gap: 2rem;
+      gap: 3rem;
     }
 
-    .hero-image { height: 60vh; }
+    .hero-visual { max-width: 400px; margin: 0 auto; }
+    .hero-quote { font-size: 0.95rem; padding: 1.2rem 1.4rem; max-width: 240px; }
 
-    .intro {
-      padding: 5rem 1.5rem;
-    }
+    .stats { padding: 2rem 1.5rem; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 
-    .intro-label {
-      margin-bottom: 2rem;
-    }
+    .why { padding: 5rem 1.5rem; }
+    .why-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 
-    .gallery { padding: 2rem 1.5rem 5rem; }
-
-    .gallery-header {
-      flex-direction: column;
-      align-items: start;
-      gap: 1rem;
-    }
-
-    .gallery-row {
+    .programs { padding: 5rem 1.5rem; }
+    .program {
       grid-template-columns: 1fr;
       gap: 1rem;
+      padding: 2rem 0;
     }
-
-    .gi-1, .gi-2, .gi-3, .gi-4, .gi-5, .gi-6 {
-      grid-column: span 1;
-      height: 60vh;
-    }
-
-    .services { padding: 5rem 1.5rem; }
-    .services-grid { grid-template-columns: 1fr; }
-    .service { border-right: none !important; }
+    .program-meta { text-align: left; }
+    .program:hover { padding-left: 0; }
 
     .about {
       grid-template-columns: 1fr;
@@ -716,140 +999,159 @@
       gap: 3rem;
     }
 
-    .testimonials { padding: 5rem 1.5rem; }
-    .contact { padding: 5rem 1.5rem; }
-    .form-row { grid-template-columns: 1fr; gap: 1.5rem; }
+    .method { padding: 5rem 1.5rem; }
+    .method-steps { grid-template-columns: 1fr; gap: 2.5rem; }
+    .method-steps::before { display: none; }
 
-    footer {
-      flex-direction: column;
-      gap: 1.5rem;
-      padding: 2rem 1.5rem;
-      text-align: center;
-    }
+    .testimonials { padding: 5rem 1.5rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+
+    .faq { padding: 5rem 1.5rem; }
+    .faq-question h3 { font-size: 1.1rem; }
+
+    .contact { padding: 5rem 1.5rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+    footer { padding: 3rem 1.5rem 2rem; }
+    .footer-top { grid-template-columns: 1fr; gap: 2.5rem; padding-bottom: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">Camille Rousseau</div>
+  <div class="logo">
+    <div class="logo-mark"></div>
+    <span>Hélène Vasseur</span>
+  </div>
   <ul class="nav-links">
-    <li><a href="#work">Travaux</a></li>
-    <li><a href="#services">Séances</a></li>
+    <li><a href="#why">Pourquoi</a></li>
+    <li><a href="#programs">Accompagnements</a></li>
+    <li><a href="#method">Méthode</a></li>
     <li><a href="#about">À propos</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Réserver</a>
+  <a href="#contact" class="nav-cta">Prendre rendez-vous</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <span class="hero-eyebrow">Photographe portraitiste · Lyon</span>
-    <h1>Le portrait,<br>comme un <em>silence</em><br>partagé.</h1>
+    <span class="hero-eyebrow">Coach certifiée RNCP · Cabinet à Nantes</span>
+    <h1>Reprendre la main sur sa <em>trajectoire</em> professionnelle.</h1>
     <p class="hero-sub">
-      Je photographie les gens dans ce qu'ils ont de plus simple et de plus juste. Studio ou lumière naturelle, à Lyon et partout en France.
+      J'accompagne dirigeants et cadres en transition à clarifier leurs choix, sortir des impasses, et construire une étape professionnelle qui leur ressemble vraiment.
     </p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Réserver une séance</a>
-      <a href="#work" class="btn-secondary">Voir le travail</a>
+      <a href="#contact" class="btn-primary">Réserver un appel</a>
+      <a href="#method" class="btn-secondary">Découvrir la méthode</a>
     </div>
   </div>
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1200&q=80" alt="Portrait en lumière naturelle">
-  </div>
-</section>
-
-<!-- INTRO -->
-<section class="intro">
-  <span class="intro-label">Manifeste</span>
-  <p class="intro-text">
-    Un bon portrait ne <em>capture</em> pas, il <em>écoute</em>. C'est l'instant où la personne arrête de poser et commence simplement à <em>être</em>. C'est ce moment-là que je cherche.
-  </p>
-</section>
-
-<!-- GALERIE -->
-<section class="gallery" id="work">
-  <div class="gallery-header">
-    <h2>Travaux <em>récents</em></h2>
-    <span class="gallery-meta">Sélection · 2024 — 2026</span>
-  </div>
-  <div class="gallery-rows-wrapper">
-    <div class="gallery-row">
-      <div class="gallery-item gi-1">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=80" alt="Marie, comédienne">
-        <div class="gallery-item-overlay">
-          <h3>Marie</h3>
-          <p>Portrait éditorial · 2025</p>
-        </div>
-      </div>
-      <div class="gallery-item gi-2">
-        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=1000&q=80" alt="Antoine, chef cuisinier">
-        <div class="gallery-item-overlay">
-          <h3>Antoine</h3>
-          <p>Portrait professionnel · 2025</p>
-        </div>
-      </div>
-    </div>
-    <div class="gallery-row">
-      <div class="gallery-item gi-3">
-        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1000&q=80" alt="Léa, auteure">
-        <div class="gallery-item-overlay">
-          <h3>Léa</h3>
-          <p>Portrait d'auteur · 2025</p>
-        </div>
-      </div>
-      <div class="gallery-item gi-4">
-        <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=1400&q=80" alt="Étude de lumière">
-        <div class="gallery-item-overlay">
-          <h3>Étude</h3>
-          <p>Recherche personnelle · 2024</p>
-        </div>
-      </div>
-    </div>
-    <div class="gallery-row">
-      <div class="gallery-item gi-5">
-        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=1200&q=80" alt="Sophie, chanteuse">
-        <div class="gallery-item-overlay">
-          <h3>Sophie</h3>
-          <p>Portrait artistique · 2026</p>
-        </div>
-      </div>
-      <div class="gallery-item gi-6">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80" alt="Thomas, architecte">
-        <div class="gallery-item-overlay">
-          <h3>Thomas</h3>
-          <p>Portrait corporate · 2026</p>
-        </div>
-      </div>
+  <div class="hero-visual">
+    <div class="hero-shape-1"></div>
+    <div class="hero-shape-2"></div>
+    <div class="hero-shape-3"></div>
+    <div class="hero-quote">
+      « En trois mois, j'ai pris la décision que j'évitais depuis deux ans. »
+      <span class="hero-quote-author">— Sandrine, DAF</span>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="services-inner">
-    <div class="services-header">
-      <span class="services-eyebrow">Trois manières de travailler ensemble</span>
-      <h2>Chaque séance,<br>une <em>rencontre</em>.</h2>
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-number">8 ans</div>
+      <div class="stat-label">d'accompagnement individuel</div>
     </div>
-    <div class="services-grid">
-      <div class="service">
-        <div class="service-num">— 01</div>
-        <h3>Portrait intime</h3>
-        <p>Une heure, un lieu, une lumière. Pour celles et ceux qui veulent une image juste d'eux-mêmes, sans artifice. Studio à Lyon ou extérieur.</p>
-        <div class="service-price">à partir de 280 €</div>
+    <div class="stat">
+      <div class="stat-number">+ 200</div>
+      <div class="stat-label">dirigeants et cadres accompagnés</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">94 %</div>
+      <div class="stat-label">recommandent le cabinet</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">RNCP</div>
+      <div class="stat-label">certification niveau 7</div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="why" id="why">
+  <div class="section-header">
+    <span class="section-eyebrow">— Pour qui</span>
+    <h2 class="section-title">Vous êtes au bon endroit si <em>l'une de ces situations vous parle.</em></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">01</div>
+      <h3>L'impasse</h3>
+      <p>Vous êtes compétent, reconnu, mais quelque chose ne s'aligne plus. Vous sentez qu'il est temps de bouger, sans savoir vers quoi.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">02</div>
+      <h3>Le passage</h3>
+      <p>Une transition s'impose — promotion, départ, création d'entreprise. Vous voulez la traverser lucidement, pas dans l'urgence.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">03</div>
+      <h3>La solitude du poste</h3>
+      <p>Dirigeant ou manager senior, vous portez des décisions complexes. Vous avez besoin d'un espace pour penser sans filtre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOMPAGNEMENTS -->
+<section class="programs" id="programs">
+  <div class="programs-inner">
+    <div class="section-header">
+      <span class="section-eyebrow">— Accompagnements</span>
+      <h2 class="section-title">Trois <em>formats</em>, une même rigueur.</h2>
+    </div>
+
+    <div class="program">
+      <div class="program-num">01</div>
+      <div>
+        <div class="program-title">Accompagnement transition</div>
       </div>
-      <div class="service">
-        <div class="service-num">— 02</div>
-        <h3>Portrait professionnel</h3>
-        <p>Une séance soignée pour votre site, votre presse, votre signature. Direction d'image, retouche, livraison HD en moins d'une semaine.</p>
-        <div class="service-price">à partir de 450 €</div>
+      <div class="program-desc">
+        Six séances pour clarifier votre situation, identifier les options réelles et construire un cap. Idéal pour un changement structurant.
       </div>
-      <div class="service">
-        <div class="service-num">— 03</div>
-        <h3>Série éditoriale</h3>
-        <p>Un projet sur mesure, sur plusieurs séances ou plusieurs lieux. Pour un livre, une marque, une exposition. Devis sur conversation.</p>
-        <div class="service-price">sur devis</div>
+      <div class="program-meta">
+        <div class="program-duration">3 mois</div>
+        <div class="program-price">1 800 €</div>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="program-num">02</div>
+      <div>
+        <div class="program-title">Coaching de dirigeant</div>
+      </div>
+      <div class="program-desc">
+        Un format d'accompagnement long pour vous, à votre rythme. Pensée stratégique, prise de décision, posture, gestion de l'incertitude.
+      </div>
+      <div class="program-meta">
+        <div class="program-duration">6 à 12 mois</div>
+        <div class="program-price">sur devis</div>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="program-num">03</div>
+      <div>
+        <div class="program-title">Séance unique</div>
+      </div>
+      <div class="program-desc">
+        Une séance de 90 minutes pour faire le point sur une question précise. Sans engagement, sans suite obligatoire.
+      </div>
+      <div class="program-meta">
+        <div class="program-duration">90 min</div>
+        <div class="program-price">220 €</div>
       </div>
     </div>
   </div>
@@ -857,84 +1159,249 @@
 
 <!-- A PROPOS -->
 <section class="about" id="about">
-  <div class="about-image">
-    <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=900&q=80" alt="Camille Rousseau">
+  <div class="about-visual">
+    <div class="about-shape">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=80" alt="Hélène Vasseur, coach professionnelle">
+    </div>
+    <div class="about-card">
+      <div class="about-card-label">Parcours</div>
+      <ul class="about-card-list">
+        <li>15 ans en direction RH grands groupes</li>
+        <li>Certifiée Coach RNCP niveau 7</li>
+        <li>Formée à l'approche systémique (Palo Alto)</li>
+        <li>Supervisée mensuellement</li>
+      </ul>
+    </div>
   </div>
   <div class="about-content">
-    <h2>Le visage<br>est un <em>paysage</em>.</h2>
+    <span class="section-eyebrow">— À propos</span>
+    <h2>Une posture, pas une <em>recette</em>.</h2>
     <p>
-      Je m'appelle Camille. J'ai grandi entre Lyon et la Drôme, et la photographie m'est venue tard — j'avais d'abord étudié les lettres modernes, ce qui explique sans doute mon goût pour les portraits qui racontent quelque chose.
+      Avant de devenir coach, j'ai passé quinze ans en direction des ressources humaines dans des groupes industriels. J'ai vu trop de transitions vécues dans la précipitation, trop de décisions importantes prises sans espace pour penser.
     </p>
     <p>
-      Aujourd'hui, je travaille en argentique et en numérique, en studio comme en lumière naturelle. Mes images ont été publiées dans Polka, Causette, et Lyon Capitale. Ma démarche reste la même depuis le premier jour : prendre le temps, écouter, photographier ce qui reste quand le sujet a oublié l'appareil.
+      Aujourd'hui je propose ce que j'aurais aimé trouver à l'époque : un cadre exigeant, un interlocuteur formé, et la disponibilité réelle pour démêler des situations complexes. Pas de prêt-à-penser, pas de promesses faciles.
     </p>
-    <div class="about-signature">— Camille</div>
+    <div class="about-signature">— Hélène</div>
   </div>
 </section>
 
-<!-- TEMOIGNAGE -->
+<!-- METHODE -->
+<section class="method" id="method">
+  <div class="method-inner">
+    <div class="section-header">
+      <span class="section-eyebrow">— Méthode</span>
+      <h2 class="section-title">Un <em>cheminement</em> en quatre temps.</h2>
+    </div>
+    <div class="method-steps">
+      <div class="method-step">
+        <div class="method-circle">01</div>
+        <h3>Premier échange</h3>
+        <p>30 minutes au téléphone, sans engagement, pour voir si ma manière de travailler vous convient.</p>
+      </div>
+      <div class="method-step">
+        <div class="method-circle">02</div>
+        <h3>Cadrage</h3>
+        <p>Une séance pour poser les enjeux, définir les objectifs, et convenir du format adapté à votre situation.</p>
+      </div>
+      <div class="method-step">
+        <div class="method-circle">03</div>
+        <h3>Travail</h3>
+        <p>Les séances de coaching à un rythme régulier. À mon cabinet à Nantes ou en visio, selon votre préférence.</p>
+      </div>
+      <div class="method-step">
+        <div class="method-circle">04</div>
+        <h3>Clôture</h3>
+        <p>Un bilan structuré pour formaliser le chemin parcouru et ce que vous emportez avec vous.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMOIGNAGES -->
 <section class="testimonials">
-  <div class="testimonials-inner">
+  <div class="section-header">
+    <span class="section-eyebrow">— Ce qu'ils en disent</span>
+    <h2 class="section-title">Quelques <em>retours</em>.</h2>
+  </div>
+  <div class="testimonials-grid">
     <div class="testimonial">
       <p class="testimonial-quote">
-        Camille a cette qualité rare de savoir se faire oublier derrière l'objectif. Mes portraits ne ressemblent à rien de ce qu'on m'avait fait avant — ils me ressemblent enfin.
+        Hélène ne vous dit pas quoi faire — elle vous met dans des conditions où vous voyez enfin clairement ce que vous savez déjà. C'est rare et précieux.
       </p>
-      <p class="testimonial-author"><strong>Marie L.</strong> · Comédienne, Lyon</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">M</div>
+        <div>
+          <div class="testimonial-name">Marc D.</div>
+          <div class="testimonial-role">Directeur général, PME industrielle</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">
+        Six séances ont suffi à débloquer ce qui me bloquait depuis deux ans. Pas de magie, juste un travail rigoureux et une vraie écoute.
+      </p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">C</div>
+        <div>
+          <div class="testimonial-name">Claire B.</div>
+          <div class="testimonial-role">DRH, secteur tertiaire</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-header" style="margin-bottom: 2rem;">
+      <span class="section-eyebrow">— Questions fréquentes</span>
+      <h2 class="section-title">Avant de <em>commencer</em>.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Comment se déroule le premier échange ?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          C'est un appel de 30 minutes, sans engagement et sans frais. Vous me dites où vous en êtes, je vous explique comment je travaille, et nous décidons ensemble si la suite a du sens.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>En visio ou en présentiel ?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          Les deux fonctionnent. Mon cabinet est à Nantes, mais j'accompagne régulièrement des clients à distance, partout en France et en Europe francophone.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Le coaching peut-il être pris en charge ?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          Oui, dans certains cas. Si vous êtes en poste, votre entreprise peut financer l'accompagnement. Si vous êtes en transition, le CPF ou le dispositif Pôle Emploi peuvent être mobilisés selon votre situation.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Quelle confidentialité ?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          Absolue. Tout ce qui est dit en séance reste entre nous. Même lorsque l'entreprise finance l'accompagnement, le contenu des séances ne lui est jamais communiqué.
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <span class="contact-eyebrow">Réserver · Échanger · Imaginer</span>
-  <h2>Parlons de votre<br><em>projet</em>.</h2>
-  <p style="color: var(--ink-soft); max-width: 600px; margin: 0 auto;">
-    Toutes les séances commencent par un échange — pour comprendre ce que vous cherchez, et voir si ma manière de travailler vous correspond.
-  </p>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <span class="section-eyebrow">— Prendre contact</span>
+      <h2>Un premier <em>échange</em>, sans engagement.</h2>
+      <p>
+        Le premier appel ne coûte rien et ne vous engage à rien. Il sert à voir si nous pouvons travailler ensemble — c'est tout.
+      </p>
+      <ul class="contact-details">
+        <li>
+          <div class="contact-icon">✉</div>
+          <span>helene@vasseur-coaching.fr</span>
+        </li>
+        <li>
+          <div class="contact-icon">☎</div>
+          <span>+33 2 40 00 00 00</span>
+        </li>
+        <li>
+          <div class="contact-icon">◎</div>
+          <span>Cabinet — 12 rue Crébillon, Nantes</span>
+        </li>
+      </ul>
+    </div>
 
-  <div class="contact-form">
-    <div class="form-row">
+    <div class="contact-form">
       <div class="form-field">
         <label for="name">Prénom & nom</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" required>
       </div>
       <div class="form-field">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" required>
       </div>
-    </div>
-    <div class="form-row">
       <div class="form-field">
-        <label for="type">Type de séance</label>
-        <select id="type" name="type">
-          <option>Portrait intime</option>
-          <option>Portrait professionnel</option>
-          <option>Série éditoriale</option>
+        <label for="role">Votre fonction actuelle</label>
+        <input type="text" id="role" placeholder="Ex. Directrice marketing, indépendant…">
+      </div>
+      <div class="form-field">
+        <label for="type">Type d'accompagnement envisagé</label>
+        <select id="type">
           <option>Je ne sais pas encore</option>
+          <option>Accompagnement transition</option>
+          <option>Coaching de dirigeant</option>
+          <option>Séance unique</option>
         </select>
       </div>
       <div class="form-field">
-        <label for="date">Période souhaitée</label>
-        <input type="text" id="date" name="date" placeholder="Ex. courant juillet">
+        <label for="message">En quelques mots, votre situation</label>
+        <textarea id="message" rows="4"></textarea>
       </div>
+      <button type="button" class="form-submit" onclick="alert('Démonstration — formulaire non connecté.');">Demander un premier échange</button>
     </div>
-    <div class="form-field form-field-full">
-      <label for="message">Votre projet, en quelques mots</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-    </div>
-    <button type="button" class="form-submit" onclick="alert('Démonstration — formulaire non connecté.');">Envoyer ma demande</button>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="logo">Camille Rousseau</div>
-  <div class="footer-links">
-    <a href="mailto:hello@camillerousseau.fr">hello@camillerousseau.fr</a>
-    <a href="#">Instagram</a>
-    <a href="#">Mentions légales</a>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-mark"></div>
+          <span>Hélène Vasseur</span>
+        </div>
+        <p>Coach professionnelle certifiée RNCP. Accompagnement de dirigeants et de cadres en transition. Cabinet à Nantes et à distance.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#why">Pourquoi</a></li>
+          <li><a href="#programs">Accompagnements</a></li>
+          <li><a href="#method">Méthode</a></li>
+          <li><a href="#about">À propos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">Code déontologique</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Hélène Vasseur Coaching</div>
+      <div>Site conçu avec soin</div>
+    </div>
   </div>
-  <div>© 2026 — Tous droits réservés</div>
 </footer>
+
+<script>
+  // FAQ accordéon
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
 
 </body>
 </html>
